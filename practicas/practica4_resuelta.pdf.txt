@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Explicación Paso a Paso - Práctica 4: Geometría (2ª Parte)</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+        h1, h2, h3 { color: #2c3e50; }
+        .ejercicio { background-color: #f9f9f9; padding: 20px; margin-bottom: 30px; border-left: 5px solid #27ae60; }
+        .enunciado { background-color: #e8f4fc; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .solucion { background-color: #fff3cd; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .explicacion { background-color: #d4edda; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .teoria { background-color: #e2e3e5; padding: 15px; border-radius: 5px; }
+        code { background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Práctica 4: Geometría (2ª Parte) - Elipse e Hipérbola</h1>
+    <p>Explicación detallada paso a paso de cada ejercicio, con aclaraciones teóricas.</p>
+
+    <!-- Ejercicio 1a -->
+    <div class="ejercicio">
+        <h2>Ejercicio 1a</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Halle la ecuación de la elipse que verifica: sus focos son F1(5,0) y F2(-5,0) y la longitud del eje mayor es 26.</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>x²/169 + y²/144 = 1</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Paso 1: Encontrar el centro.</strong> El centro de la elipse es el punto medio entre los focos. F1(5,0) y F2(-5,0). Punto medio: ((5 + (-5))/2, (0+0)/2) = (0,0). Centro C(0,0).</p>
+            <p><strong>Paso 2: Determinar la orientación.</strong> Los focos están sobre el eje X (misma coordenada Y=0), por lo tanto el eje mayor es horizontal. La ecuación será de la forma: x²/a² + y²/b² = 1, con a > b.</p>
+            <p><strong>Paso 3: Calcular 'a'.</strong> La longitud del eje mayor es 2a = 26 → a = 13 → a² = 169.</p>
+            <p><strong>Paso 4: Calcular 'c'.</strong> La distancia del centro a cada foco es 'c'. Distancia de (0,0) a (5,0) es 5. Entonces c = 5 → c² = 25.</p>
+            <p><strong>Paso 5: Calcular 'b'.</strong> En una elipse, c² = a² - b². Entonces b² = a² - c² = 169 - 25 = 144.</p>
+            <p><strong>Paso 6: Escribir la ecuación.</strong> Sustituimos a² y b²: x²/169 + y²/144 = 1.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Elipse con centro en (0,0) y eje mayor horizontal:</strong> x²/a² + y²/b² = 1, con a > b. Distancia focal: 2c. Relación: c² = a² - b².</p>
+            <p><em>Referencia: Apunte de Geometría, Página 49.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 2a -->
+    <div class="ejercicio">
+        <h2>Ejercicio 2a</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Encuentre los elementos de la elipse x²/9 + 4y²/9 = 1.</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>Centro: (0,0)</p>
+            <p>a² = 9, b² = 9/4 → a=3, b=3/2</p>
+            <p>Eje mayor vertical (porque 9 > 9/4)</p>
+            <p>c² = a² - b² = 9 - 9/4 = 27/4 → c = (3√3)/2</p>
+            <p>Vértices: (0,3), (0,-3)</p>
+            <p>Covértices: (3/2,0), (-3/2,0)</p>
+            <p>Focos: (0, (3√3)/2), (0, -(3√3)/2)</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p>La ecuación es x²/9 + 4y²/9 = 1. Reescribimos el segundo término: x²/9 + y²/(9/4) = 1.</p>
+            <p><strong>Forma canónica:</strong> Es de la forma x²/b² + y²/a² = 1, porque 9 > 9/4 (a²=9, b²=9/4). Por lo tanto, el eje mayor es vertical.</p>
+            <p><strong>Centro:</strong> (0,0).</p>
+            <p><strong>Semiejemayor (a):</strong> a² = 9 → a = 3.</p>
+            <p><strong>Semiejemenor (b):</strong> b² = 9/4 → b = 3/2.</p>
+            <p><strong>Distancia focal (c):</strong> c² = a² - b² = 9 - 9/4 = 36/4 - 9/4 = 27/4 → c = √(27/4) = (3√3)/2.</p>
+            <p><strong>Vértices:</strong> Como el eje mayor es vertical, los vértices están en (0, a) y (0, -a): (0,3) y (0,-3).</p>
+            <p><strong>Covértices:</strong> Como el eje menor es horizontal, los covértices están en (b, 0) y (-b, 0): (3/2, 0) y (-3/2, 0).</p>
+            <p><strong>Focos:</strong> Están sobre el eje mayor (vertical), a distancia c del centro: (0, c) y (0, -c): (0, (3√3)/2) y (0, -(3√3)/2).</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Elipse con centro en (0,0) y eje mayor vertical:</strong> x²/b² + y²/a² = 1, con a > b. Vértices: (0,±a). Covértices: (±b,0). Focos: (0,±c), con c² = a² - b².</p>
+            <p><em>Referencia: Apunte de Geometría, Página 49.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 5a -->
+    <div class="ejercicio">
+        <h2>Ejercicio 5a</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Encuentre los elementos de la hipérbola (x−2)²/25 − (y+2)²/16 = 1.</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>Centro: (2,-2)</p>
+            <p>a²=25, b²=16 → a=5, b=4</p>
+            <p>Eje focal horizontal</p>
+            <p>c² = a² + b² = 25 + 16 = 41 → c = √41</p>
+            <p>Vértices: (7,-2), (-3,-2)</p>
+            <p>Focos: (2+√41, -2), (2-√41, -2)</p>
+            <p>Asíntotas: y+2 = ±(4/5)(x-2)</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p>La ecuación (x−2)²/25 − (y+2)²/16 = 1 está en forma canónica.</p>
+            <p><strong>Centro (C):</strong> (α,β) = (2, -2).</p>
+            <p><strong>Orientación:</strong> El término positivo es el de x, por lo tanto el eje focal es horizontal.</p>
+            <p><strong>Parámetros a y b:</strong> a² = 25 → a = 5. b² = 16 → b = 4.</p>
+            <p><strong>Distancia focal (c):</strong> En la hipérbola, c² = a² + b² = 25 + 16 = 41 → c = √41.</p>
+            <p><strong>Vértices:</strong> Están sobre el eje focal (horizontal), a distancia 'a' del centro. Como el centro es (2,-2), los vértices son (2±a, -2) = (2±5, -2) → (7,-2) y (-3,-2).</p>
+            <p><strong>Focos:</strong> Están sobre el eje focal, a distancia 'c' del centro: (2±c, -2) = (2±√41, -2).</p>
+            <p><strong>Asíntotas:</strong> Son rectas que pasan por el centro con pendientes ±b/a. Pendientes: ±4/5. Ecuaciones: y - β = ±(b/a)(x - α) → y - (-2) = ±(4/5)(x - 2) → y + 2 = ±(4/5)(x - 2).</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Hipérbola con centro en (α,β) y eje focal horizontal:</strong> (x−α)²/a² − (y−β)²/b² = 1. Vértices: (α±a, β). Focos: (α±c, β), con c² = a² + b². Asíntotas: y−β = ±(b/a)(x−α).</p>
+            <p><em>Referencia: Apunte de Geometría, Página 56.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 5b -->
+    <div class="ejercicio">
+        <h2>Ejercicio 5b</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Encuentre los elementos de la hipérbola 9x² − 16y² = 144.</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>Dividiendo por 144: x²/16 - y²/9 = 1</p>
+            <p>Centro: (0,0)</p>
+            <p>a²=16, b²=9 → a=4, b=3</p>
+            <p>Eje focal horizontal</p>
+            <p>c² = 16 + 9 = 25 → c=5</p>
+            <p>Vértices: (4,0), (-4,0)</p>
+            <p>Focos: (5,0), (-5,0)</p>
+            <p>Asíntotas: y = ±(3/4)x</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Paso 1: Llevar a forma canónica.</strong> Dividimos toda la ecuación por 144: 9x²/144 - 16y²/144 = 144/144 → x²/16 - y²/9 = 1.</p>
+            <p><strong>Paso 2: Identificar centro y orientación.</strong> Centro (0,0). Término positivo en x, eje focal horizontal.</p>
+            <p><strong>Paso 3: Parámetros a y b.</strong> a² = 16 → a = 4. b² = 9 → b = 3.</p>
+            <p><strong>Paso 4: Calcular c.</strong> c² = a² + b² = 16 + 9 = 25 → c = 5.</p>
+            <p><strong>Paso 5: Vértices y focos.</strong> Vértices: (±a, 0) = (±4, 0). Focos: (±c, 0) = (±5, 0).</p>
+            <p><strong>Paso 6: Asíntotas.</strong> Pendientes ±b/a = ±3/4. Ecuaciones: y = ±(3/4)x.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Hipérbola con centro en (0,0) y eje focal horizontal:</strong> x²/a² - y²/b² = 1. Elementos como en el caso general con (α,β)=(0,0).</p>
+            <p><em>Referencia: Apunte de Geometría, Página 56.</em></p>
+        </div>
+    </div>
+
+    <p><strong>Nota:</strong> Este archivo cubre ejercicios representativos de la Práctica 4. Se pueden agregar más ejercicios según sea necesario.</p>
+</body>
+</html>

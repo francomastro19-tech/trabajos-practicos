@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Explicación Paso a Paso - Práctica 5: Aplicaciones en Económicas</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+        h1, h2, h3 { color: #2c3e50; }
+        .ejercicio { background-color: #f9f9f9; padding: 20px; margin-bottom: 30px; border-left: 5px solid #d35400; }
+        .enunciado { background-color: #e8f4fc; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .solucion { background-color: #fff3cd; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .explicacion { background-color: #d4edda; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .teoria { background-color: #e2e3e5; padding: 15px; border-radius: 5px; }
+        code { background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Práctica 5: Aplicaciones en Económicas</h1>
+    <p>Explicación detallada paso a paso de cada ejercicio, con aclaraciones teóricas.</p>
+
+    <!-- Ejercicio 1 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 1: Demanda Lineal</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Hallar la ecuación (lineal) de demanda de la producción de luces de emergencia si cuando el precio es 80 u.m. se venden 10 unidades, mientras que si el precio es de 60 u.m. se venden 20. ¿A qué precio no se venderá ninguna luz de emergencia?</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>y = -2x + 100</p>
+            <p>Precio al cual no se vende ninguna unidad: 100 u.m. (ordenada al origen).</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p>Modelamos la demanda como una recta, donde x es la cantidad vendida y y es el precio.</p>
+            <p>Tenemos dos puntos: A(10, 80) y B(20, 60).</p>
+            <p><strong>Paso 1: Calcular la pendiente (m).</strong> m = (y2 - y1) / (x2 - x1) = (60 - 80) / (20 - 10) = (-20) / 10 = -2.</p>
+            <p>La pendiente negativa tiene sentido: cuando el precio baja, la demanda aumenta.</p>
+            <p><strong>Paso 2: Usar la ecuación punto-pendiente.</strong> Usamos el punto A(10,80): y - 80 = -2(x - 10).</p>
+            <p><strong>Paso 3: Simplificar.</strong> y - 80 = -2x + 20 → y = -2x + 20 + 80 → y = -2x + 100.</p>
+            <p><strong>Paso 4: Precio para demanda cero.</strong> Cuando no se vende ninguna unidad, x=0. Sustituimos: y = -2(0) + 100 = 100. Por lo tanto, a un precio de 100 u.m., la demanda es 0.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Modelo de Demanda Lineal:</strong> Relaciona el precio (P) de un producto con la cantidad demandada (Q). Suele ser una recta con pendiente negativa: P = mQ + b, con m < 0.</p>
+            <p><em>Referencia: Apunte de Geometría, Página 62.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 3 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 3: Oferta Lineal</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Cuando el precio de un modelo de memoria externa es de 25 dólares no hay unidades disponibles en el mercado, pero a medida que aumenta el precio, se dispone de más oferta a razón de 20 unidades por cada 10 dólares que aumenta su valor de venta. ¿Cuál es la ecuación de oferta?</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>y = (1/2)x + 25</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p>Modelamos la oferta como una recta, donde x es la cantidad ofrecida y y es el precio.</p>
+            <p><strong>Paso 1: Identificar un punto.</strong> Cuando el precio es 25, la oferta es 0: punto (0, 25). Este es la ordenada al origen (b=25).</p>
+            <p><strong>Paso 2: Calcular la pendiente (m).</strong> La pendiente es la variación del precio sobre la variación de la cantidad. "20 unidades por cada 10 dólares" significa que por cada aumento de 10 dólares en el precio, la oferta aumenta en 20 unidades. Entonces, m = Δy / Δx = 10 / 20 = 1/2.</p>
+            <p>La pendiente positiva tiene sentido: cuando el precio sube, la oferta aumenta.</p>
+            <p><strong>Paso 3: Escribir la ecuación.</strong> Con m=1/2 y b=25, la ecuación es y = (1/2)x + 25.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Modelo de Oferta Lineal:</strong> Relaciona el precio (P) de un producto con la cantidad ofrecida (Q). Suele ser una recta con pendiente positiva: P = mQ + b, con m > 0.</p>
+            <p><em>Referencia: Apunte de Geometría, Página 62 (por analogía con demanda).</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 4 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 4: Curva de Transformación (Elipse)</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Una empresa de elaborados lácteos produce principalmente quesos y manteca. La curva de transformación asociada a dichos productos responde a la ecuación: Q² + 2Q + 4M - 168 = 0, siendo Q la producción de quesos (en cientos de unidades) y M la producción de manteca (en cientos de panes). Hallar: a) máxima producción de quesos; b) máxima producción de manteca; c) ¿hay valores para los cuales ambas producciones se equiparan?</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>a) Máxima producción de quesos: 12 (cuando M=0)</p>
+            <p>b) Máxima producción de manteca: 42 (cuando Q=0)</p>
+            <p>c) Sí, cuando Q = M ≈ 10.30</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Paso 1: Completar cuadrados.</strong> La ecuación es Q² + 2Q + 4M - 168 = 0. Completamos cuadrados para Q: Q² + 2Q = (Q+1)² - 1. Sustituimos: (Q+1)² - 1 + 4M - 168 = 0 → (Q+1)² + 4M = 169.</p>
+            <p><strong>Paso 2: Despejar M.</strong> 4M = 169 - (Q+1)² → M = (169 - (Q+1)²) / 4.</p>
+            <p><strong>Paso 3: Máxima producción de quesos (Q).</strong> Ocurre cuando M=0. Entonces: 0 = (169 - (Q+1)²) / 4 → 169 - (Q+1)² = 0 → (Q+1)² = 169 → Q+1 = ±13. Como Q ≥ 0, tomamos Q+1 = 13 → Q = 12.</p>
+            <p><strong>Paso 4: Máxima producción de manteca (M).</strong> Ocurre cuando Q=0. Sustituimos Q=0 en la ecuación original: 0 + 0 + 4M - 168 = 0 → 4M = 168 → M = 42.</p>
+            <p><strong>Paso 5: Producciones iguales (Q = M).</strong> Sustituimos M = Q en la ecuación original: Q² + 2Q + 4Q - 168 = 0 → Q² + 6Q - 168 = 0. Resolvemos la cuadrática: Q = [-6 ± √(36 + 672)] / 2 = [-6 ± √708] / 2 = [-6 ± 2√177] / 2 = -3 ± √177. Tomamos la solución positiva: Q = -3 + √177 ≈ -3 + 13.30 = 10.30. Entonces M = 10.30.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Curva de Transformación:</strong> Describe la relación entre las cantidades producidas de dos artículos por una misma empresa. Suele modelarse con una elipse en el primer cuadrante. Los interceptos con los ejes indican la producción máxima de un artículo cuando la producción del otro es cero.</p>
+            <p><em>Referencia: Apunte de Geometría, Página 64.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 8 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 8: Equilibrio de Mercado (Lineal)</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Un producto que se vende en el mercado responde a las siguientes ecuaciones de oferta y demanda: Qd = 20 - 5P; Qs = -4 + 6P. Halle el precio (P*) y la cantidad (Q*) que establece el equilibrio de mercado.</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>P* = 24/11 ≈ 2.18</p>
+            <p>Q* = 9.09</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p>El equilibrio de mercado ocurre cuando la cantidad demandada (Qd) es igual a la cantidad ofrecida (Qs).</p>
+            <p><strong>Paso 1: Igualar Qd y Qs.</strong> 20 - 5P = -4 + 6P.</p>
+            <p><strong>Paso 2: Resolver para P.</strong> 20 + 4 = 6P + 5P → 24 = 11P → P = 24/11 ≈ 2.18.</p>
+            <p><strong>Paso 3: Calcular Q*.</strong> Sustituimos P en cualquiera de las ecuaciones (por ejemplo, en Qd): Q* = 20 - 5*(24/11) = 20 - 120/11 = (220 - 120)/11 = 100/11 ≈ 9.09.</p>
+            <p>Verificamos con Qs: Qs = -4 + 6*(24/11) = -4 + 144/11 = (-44 + 144)/11 = 100/11 ≈ 9.09. ¡Coincide!</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Equilibrio de Mercado:</strong> Es el punto (P*, Q*) donde la curva de demanda y la curva de oferta se intersecan. Se halla resolviendo el sistema de ecuaciones Qd(P) = Qs(P).</p>
+            <p><em>Referencia: Apunte de Geometría, Página 67.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 9 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 9: Equilibrio de Mercado (No Lineal)</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Considere las siguientes ecuaciones de oferta y demanda: Qd = 2 - P²; Qs = 3P - 2. Halle el precio y la cantidad que generan que no haya excedentes ni faltantes del producto en el mercado.</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>P = 1, Q = 1 (solución económica válida)</p>
+            <p>P = -4, Q = -14 (solución matemática, no válida económicamente)</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Paso 1: Igualar Qd y Qs.</strong> 2 - P² = 3P - 2.</p>
+            <p><strong>Paso 2: Llevar a forma cuadrática.</strong> 2 - P² - 3P + 2 = 0 → -P² - 3P + 4 = 0. Multiplicamos por -1: P² + 3P - 4 = 0.</p>
+            <p><strong>Paso 3: Resolver la cuadrática.</strong> P = [-3 ± √(9 + 16)] / 2 = [-3 ± √25] / 2 = [-3 ± 5] / 2.</p>
+            <p>Primera solución: P = (-3 + 5)/2 = 2/2 = 1.</p>
+            <p>Segunda solución: P = (-3 - 5)/2 = -8/2 = -4.</p>
+            <p><strong>Paso 4: Calcular Q para cada P.</strong></p>
+            <p>Para P=1: Qd = 2 - (1)² = 1; Qs = 3(1) - 2 = 1. Q=1.</p>
+            <p>Para P=-4: Qd = 2 - (-4)² = 2 - 16 = -14; Qs = 3(-4) - 2 = -12 - 2 = -14. Q=-14.</p>
+            <p><strong>Paso 5: Interpretación económica.</strong> El precio no puede ser negativo (P=-4 no tiene sentido). La cantidad no puede ser negativa (Q=-14 no tiene sentido). Por lo tanto, la única solución económicamente válida es P=1, Q=1.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Equilibrio de Mercado (No Lineal):</strong> El procedimiento es el mismo que en el caso lineal, pero puede dar lugar a ecuaciones no lineales (cuadráticas, etc.). Es crucial interpretar las soluciones en el contexto económico: precios y cantidades deben ser no negativos.</p>
+            <p><em>Referencia: Apunte de Geometría, Página 68.</em></p>
+        </div>
+    </div>
+
+    <p><strong>Nota:</strong> Este archivo cubre los ejercicios principales de la Práctica 5. Se pueden agregar más ejercicios según sea necesario.</p>
+</body>
+</html>

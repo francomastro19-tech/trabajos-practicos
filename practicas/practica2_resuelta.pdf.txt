@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Explicación Paso a Paso - Práctica 2: Análisis Combinatorio</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+        h1, h2, h3 { color: #2c3e50; }
+        .ejercicio { background-color: #f9f9f9; padding: 20px; margin-bottom: 30px; border-left: 5px solid #e74c3c; }
+        .enunciado { background-color: #e8f4fc; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .solucion { background-color: #fff3cd; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .explicacion { background-color: #d4edda; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        .teoria { background-color: #e2e3e5; padding: 15px; border-radius: 5px; }
+        code { background-color: #eee; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>Práctica 2: Análisis Combinatorio</h1>
+    <p>Explicación detallada paso a paso de cada ejercicio, con aclaraciones teóricas.</p>
+
+    <!-- Ejercicio 1 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 1</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>Con los dígitos 0, 1, 2, 3, 6, 7, 8, cuántos números de 4 cifras pueden formarse si:</p>
+            <p>(a) no hay ninguna restricción;</p>
+            <p>(b) las cifras deben ser distintas;</p>
+            <p>(c) los números deben ser pares;</p>
+            <p>(d) los números comienzan y terminan con un dígito impar;</p>
+            <p>(e) los números comienzan con 3 o terminan con 7.</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>a) 6 · 7 · 7 · 7 = 2058</p>
+            <p>b) 6 · 6 · 5 · 4 = 720</p>
+            <p>c) 6 · 7 · 7 · 4 = 1176</p>
+            <p>d) 3 · 7 · 7 · 3 = 441</p>
+            <p>e) 343 + 294 - 49 = 588</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Parte a) Sin restricciones:</strong> Un número de 4 cifras no puede empezar por 0. Por lo tanto, para la primera cifra (unidades de mil) tenemos 6 opciones (1,2,3,6,7,8). Para las siguientes tres cifras (centenas, decenas, unidades) no hay restricción, por lo que cada una puede ser cualquiera de los 7 dígitos. Aplicamos el principio de multiplicación: 6 × 7 × 7 × 7 = 2058.</p>
+            <p><strong>Parte b) Cifras distintas:</strong> Primera cifra: 6 opciones (no puede ser 0). Segunda cifra: 6 opciones (puede ser 0, pero no el dígito usado en la primera posición). Tercera cifra: 5 opciones. Cuarta cifra: 4 opciones. Total: 6 × 6 × 5 × 4 = 720.</p>
+            <p><strong>Parte c) Números pares:</strong> Un número es par si su última cifra es par. Los dígitos pares disponibles son 0, 2, 6, 8 (4 opciones). Primera cifra: 6 opciones (no 0). Segunda y tercera cifra: 7 opciones cada una. Aplicamos multiplicación: 6 × 7 × 7 × 4 = 1176.</p>
+            <p><strong>Parte d) Comienzan y terminan con dígito impar:</strong> Dígitos impares: 1, 3, 7 (3 opciones). Primera cifra: 3 opciones. Última cifra: 3 opciones. Las cifras del medio (segunda y tercera) no tienen restricción: 7 opciones cada una. Total: 3 × 7 × 7 × 3 = 441.</p>
+            <p><strong>Parte e) Comienzan con 3 o terminan con 7:</strong> Aquí usamos el principio de suma, pero debemos restar la intersección para no contar dos veces. Caso 1: Empiezan con 3. Primera cifra fija (1 opción), las otras tres: 7 opciones cada una. Total: 1 × 7 × 7 × 7 = 343. Caso 2: Terminan con 7. Última cifra fija (1 opción). Primera cifra: 6 opciones (no 0). Las dos del medio: 7 opciones cada una. Total: 6 × 7 × 7 × 1 = 294. Intersección (empiezan con 3 y terminan con 7): Primera y última fijas, las dos del medio: 7 opciones cada una. Total: 1 × 7 × 7 × 1 = 49. Por lo tanto, total = 343 + 294 - 49 = 588.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Principio de Multiplicación:</strong> Si un procedimiento se puede descomponer en etapas sucesivas, y la primera etapa tiene <code>n1</code> formas, la segunda <code>n2</code> formas, etc., entonces el procedimiento completo se puede realizar de <code>n1 × n2 × ... × nk</code> formas.</p>
+            <p><strong>Principio de Suma:</strong> Si un procedimiento se puede realizar de <code>n1</code> formas o de <code>n2</code> formas (mutuamente excluyentes), entonces se puede realizar de <code>n1 + n2</code> formas. Si los conjuntos no son disjuntos, se usa: |A ∪ B| = |A| + |B| - |A ∩ B|.</p>
+            <p><em>Referencia: Apunte de Análisis Combinatorio, Páginas 21-23.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 2 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 2</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>¿De cuántas maneras se pueden reordenar las letras de la palabra ARITOS si:</p>
+            <p>(a) no hay restricciones;</p>
+            <p>(b) los anagramas deben comenzar con T;</p>
+            <p>(c) los anagramas deben terminar con A;</p>
+            <p>(d) los anagramas deben terminar con A y comenzar con T;</p>
+            <p>(e) los anagramas deben comenzar con vocal;</p>
+            <p>(f) las vocales y consonantes de cada anagrama se deben alternar;</p>
+            <p>(g) las letras O y T deben estar juntas;</p>
+            <p>(h) las letras O y T no pueden estar juntas.</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>a) P6 = 6! = 720</p>
+            <p>b) P5 = 5! = 120</p>
+            <p>c) P5 = 5! = 120</p>
+            <p>d) P4 = 4! = 24</p>
+            <p>e) V3,1 · P5 = 3 · 120 = 360</p>
+            <p>f) P3 · P3 · P2 = 6 · 6 · 2 = 72</p>
+            <p>g) P5 · P2 = 120 · 2 = 240</p>
+            <p>h) P6 – P5 · P2 = 720 – 240 = 480</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Parte a) Sin restricciones:</strong> La palabra "ARITOS" tiene 6 letras, todas distintas. El número de permutaciones de 6 elementos distintos es 6! = 720.</p>
+            <p><strong>Parte b) Comienzan con T:</strong> La primera letra está fija (T). Nos quedan 5 letras para reordenar en las 5 posiciones restantes. Permutaciones de 5 elementos: 5! = 120.</p>
+            <p><strong>Parte c) Terminan con A:</strong> La última letra está fija (A). Las primeras 5 posiciones se rellenan con las 5 letras restantes: 5! = 120.</p>
+            <p><strong>Parte d) Comienzan con T y terminan con A:</strong> Primera y última letra fijas. Las 4 posiciones del medio se rellenan con las 4 letras restantes: 4! = 24.</p>
+            <p><strong>Parte e) Comienzan con vocal:</strong> Vocales en "ARITOS": A, I, O (3 opciones). Elegimos una vocal para la primera posición: 3 formas. Las 5 posiciones restantes se rellenan con las 5 letras restantes: 5! = 120. Total: 3 × 120 = 360.</p>
+            <p><strong>Parte f) Vocales y consonantes alternan:</strong> Hay 3 vocales (A,I,O) y 3 consonantes (R,T,S). Para que alternen, debe ser V-C-V-C-V-C o C-V-C-V-C-V. Calculamos para un patrón y multiplicamos por 2. Patrón V-C-V-C-V-C: Las 3 vocales se pueden ordenar de 3! formas en las posiciones de vocal. Las 3 consonantes se pueden ordenar de 3! formas en las posiciones de consonante. Total para un patrón: 3! × 3! = 36. Para los dos patrones: 36 × 2 = 72.</p>
+            <p><strong>Parte g) O y T juntas:</strong> Tratamos "O" y "T" como una sola unidad o "bloque". Este bloque puede ser "OT" o "TO" (2 formas). Ahora tenemos 5 elementos para permutar: el bloque y las otras 4 letras (A,R,I,S). Permutaciones de 5 elementos: 5! = 120. Total: 120 × 2 = 240.</p>
+            <p><strong>Parte h) O y T no juntas:</strong> Calculamos el total sin restricciones (720) y le restamos la cantidad donde O y T están juntas (240). Total: 720 - 240 = 480.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Permutación Simple (Pn):</strong> Es el número de maneras de ordenar <code>n</code> objetos distintos. <code>Pn = n!</code>.</p>
+            <p><strong>Variación Simple (Vn,k):</strong> Es el número de maneras de elegir <code>k</code> objetos de <code>n</code> distintos y ordenarlos. <code>Vn,k = n! / (n-k)!</code>.</p>
+            <p><strong>Truco del "bloque":</strong> Cuando dos elementos deben estar juntos, se los trata como una sola unidad. Luego se multiplica por las formas de ordenar los elementos dentro del bloque.</p>
+            <p><em>Referencia: Apunte de Análisis Combinatorio, Páginas 25-26.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 3 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 3</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>¿Cuántas banderas de 4 bandas de diferente color pueden formarse con los colores verde, rojo, azul, blanco y amarillo?</p>
+            <p>¿Cuántas de las anteriores tienen la tercera banda amarilla o roja?</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>a) V5,4 = 5! / (5-4)! = 120</p>
+            <p>b) V4,3 + V4,3 = 24 + 24 = 48</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Parte a):</strong> Tenemos 5 colores y debemos elegir 4 de ellos y ordenarlos en las 4 bandas. Como el orden importa y no se repiten colores, usamos variación simple: V5,4 = 5 × 4 × 3 × 2 = 120.</p>
+            <p><strong>Parte b):</strong> Queremos banderas donde la tercera banda sea amarilla o roja. Usamos el principio de suma. Caso 1: Tercera banda amarilla. La tercera posición está fija. Nos quedan 4 colores para elegir y ordenar en las 3 posiciones restantes: V4,3 = 4 × 3 × 2 = 24. Caso 2: Tercera banda roja. Igual que el caso 1: V4,3 = 24. Como los casos son mutuamente excluyentes (la tercera banda no puede ser amarilla y roja a la vez), sumamos: 24 + 24 = 48.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Variación Simple (Vn,k):</strong> Se usa cuando se seleccionan <code>k</code> elementos de un total de <code>n</code> y el orden de selección es importante. La fórmula es <code>Vn,k = n × (n-1) × ... × (n-k+1)</code>.</p>
+            <p><em>Referencia: Apunte de Análisis Combinatorio, Página 26.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 4 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 4</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>En un grupo de 20 hombres y 20 mujeres,</p>
+            <p>(a) ¿de cuántas maneras se pueden elegir presidente, vicepresidente, tesorero y secretario si: el tesorero debe ser una mujer, el secretario debe ser un hombre y cada persona puede ocupar a lo sumo un cargo?</p>
+            <p>(b) ¿de cuántas maneras se puede formar una comisión con 12 personas?; ¿cuántas de estas comisiones tienen exactamente 5 mujeres?; ¿cuántas exactamente 10 hombres?; ¿cuántas más mujeres que hombres?</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>a) V38,1 · V37,1 · V20,1 · V20,1 = 38 · 37 · 20 · 20 = 562.400</p>
+            <p>b) C40,12 = 40! / (12! · 28!)</p>
+            <p>Exactamente 5 mujeres: C20,5 · C20,7</p>
+            <p>Exactamente 10 hombres: C20,10 · C20,2</p>
+            <p>Más mujeres que hombres: C20,11 · C20,1 + C20,10 · C20,2 + C20,9 · C20,3 + C20,8 · C20,4 + C20,7 · C20,5</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Parte a):</strong> Son cargos distintos, por lo que el orden importa (es una variación). Tenemos 40 personas en total. Primero elegimos presidente: 40 opciones. Luego vicepresidente: 39 opciones (no puede ser el presidente). Pero debemos asignar tesorero (mujer) y secretario (hombre). Es más fácil asignar primero los cargos con restricción. Tesorero (mujer): 20 opciones. Secretario (hombre): 20 opciones. Ahora, para presidente y vicepresidente, nos quedan 38 personas (40 - 2 ya asignadas). Presidente: 38 opciones. Vicepresidente: 37 opciones. Total: 38 × 37 × 20 × 20 = 562.400.</p>
+            <p><strong>Parte b):</strong> Formar una comisión de 12 personas de 40. El orden no importa, es una combinación: C40,12.</p>
+            <p>- Exactamente 5 mujeres: Debemos elegir 5 mujeres de 20: C20,5. Y 7 hombres de 20 (para completar 12): C20,7. Por el principio de multiplicación: C20,5 × C20,7.</p>
+            <p>- Exactamente 10 hombres: Elegir 10 hombres de 20: C20,10. Y 2 mujeres de 20: C20,2. Total: C20,10 × C20,2.</p>
+            <p>- Más mujeres que hombres: En una comisión de 12, "más mujeres" significa 7, 8, 9, 10, 11 o 12 mujeres. Pero como solo hay 20 de cada, y 12 es par, las posibilidades son: 7 mujeres y 5 hombres, 8m y 4h, 9m y 3h, 10m y 2h, 11m y 1h, 12m y 0h. Sumamos todos los casos: (C20,7 × C20,5) + (C20,8 × C20,4) + (C20,9 × C20,3) + (C20,10 × C20,2) + (C20,11 × C20,1) + (C20,12 × C20,0). (Nota: La solución resuelta solo suma hasta 7 mujeres, lo cual es incorrecto. Debe incluir todos los casos).</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Combinación Simple (Cn,k):</strong> Es el número de maneras de elegir <code>k</code> elementos de un total de <code>n</code> cuando el orden no importa. <code>Cn,k = n! / (k! · (n-k)!)</code>.</p>
+            <p><strong>Principio de Multiplicación en Combinatoria:</strong> Si una tarea se divide en etapas independientes, el número total de formas es el producto de las formas de cada etapa.</p>
+            <p><em>Referencia: Apunte de Análisis Combinatorio, Páginas 28-29.</em></p>
+        </div>
+    </div>
+
+    <!-- Ejercicio 5 -->
+    <div class="ejercicio">
+        <h2>Ejercicio 5</h2>
+        
+        <div class="enunciado">
+            <h3>Enunciado</h3>
+            <p>¿Cuántas ordenaciones diferentes se pueden formar con todas las letras de la palabra PURMAMARCA?</p>
+            <p>¿Cuántas de ellas no tienen juntas las letras R y C?</p>
+        </div>
+
+        <div class="solucion">
+            <h3>Solución Resuelta</h3>
+            <p>Total: PR10(1,1,2,2,3,1) = 10! / (1!·1!·2!·2!·3!·1!) = 151200</p>
+            <p>Con R y C juntas: PR9(1,1,1,2,3,1) · 2! = (9! / (1!·1!·1!·2!·3!·1!)) · 2 = 30240 · 2 = 60480</p>
+            <p>Sin R y C juntas: 151200 - 60480 = 90720</p>
+        </div>
+
+        <div class="explicacion">
+            <h3>Explicación Paso a Paso</h3>
+            <p><strong>Total de ordenaciones:</strong> La palabra "PURMAMARCA" tiene 10 letras, pero con repeticiones: P(1), U(1), R(2), M(2), A(3), C(1). El número de permutaciones con elementos repetidos es: 10! / (1! · 1! · 2! · 2! · 3! · 1!) = 3628800 / (1·1·2·2·6·1) = 3628800 / 24 = 151200.</p>
+            <p><strong>Con R y C juntas:</strong> Tratamos "R" y "C" como un solo bloque. Pero hay 2 letras R. El bloque puede ser "RC" o "CR" (2 formas). Ahora, el bloque cuenta como una unidad. Las letras que nos quedan son: P(1), U(1), R(1) [la otra R], M(2), A(3), y el bloque. Total de "elementos" a ordenar: 9 (P, U, R, M, M, A, A, A, Bloque). El número de permutaciones de estos 9 elementos (con repeticiones) es: 9! / (1!·1!·1!·2!·3!·1!) = 362880 / (1·1·1·2·6·1) = 362880 / 12 = 30240. Pero como el bloque tiene 2 formas internas (RC o CR), multiplicamos por 2: 30240 × 2 = 60480.</p>
+            <p><strong>Sin R y C juntas:</strong> Total de ordenaciones menos las que tienen R y C juntas: 151200 - 60480 = 90720.</p>
+        </div>
+
+        <div class="teoria">
+            <h3>Aclaración Teórica</h3>
+            <p><strong>Permutación con Repetición (PRn(n1,n2,...,nk)):</strong> Es el número de maneras de ordenar <code>n</code> objetos donde hay <code>n1</code> iguales de tipo 1, <code>n2</code> iguales de tipo 2, ..., <code>nk</code> iguales de tipo k (con n1+n2+...+nk = n). La fórmula es: <code>n! / (n1! · n2! · ... · nk!)</code>.</p>
+            <p><em>Referencia: Apunte de Análisis Combinatorio, Página 27.</em></p>
+        </div>
+    </div>
+
+    <p><strong>Nota:</strong> Este archivo cubre los ejercicios principales de la Práctica 2. Se pueden agregar más ejercicios según sea necesario.</p>
+</body>
+</html>
