@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática II - FCE UNLP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>📚 Matemática II - FCE UNLP</h1>
+        <p>Material de estudio: Teoría, Prácticas y Resoluciones</p>
+    </header>
+
+    <main class="main">
+        <!-- Selector de práctica -->
+        <div class="selector">
+            <label for="practicaSelector">Selecciona una práctica:</label>
+            <select id="practicaSelector" onchange="cambiarPractica()">
+                <option value="">-- Elige una práctica --</option>
+                <option value="1">Práctica 1: Conjuntos y Relaciones</option>
+                <option value="2">Práctica 2: Análisis Combinatorio</option>
+                <option value="3">Práctica 3: Geometría (1ª Parte)</option>
+                <option value="4">Práctica 4: Geometría (2ª Parte)</option>
+                <option value="5">Práctica 5: Aplicaciones en Económicas</option>
+            </select>
+        </div>
+
+        <!-- Contenido de las pestañas -->
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'teoria')">Teoría</button>
+            <button class="tablink" onclick="openTab(event, 'enunciado')">Enunciado</button>
+            <button class="tablink" onclick="openTab(event, 'resolucion')">Resolución</button>
+            <button class="tablink" onclick="openTab(event, 'explicacion')">Explicación Paso a Paso</button>
+        </div>
+
+        <div id="teoria" class="tabcontent" style="display: block;">
+            <h2>📚 Teoría</h2>
+            <iframe id="iframeTeoria" src="" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+
+        <div id="enunciado" class="tabcontent">
+            <h2>📝 Enunciado de la Práctica</h2>
+            <iframe id="iframeEnunciado" src="" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+
+        <div id="resolucion" class="tabcontent">
+            <h2>✅ Resolución</h2>
+            <iframe id="iframeResolucion" src="" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+
+        <div id="explicacion" class="tabcontent">
+            <h2>💡 Explicación Paso a Paso</h2>
+            <div id="divExplicacion">
+                <p>Selecciona una práctica para ver su explicación detallada.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 - Material para Matemática II - FCE UNLP</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
